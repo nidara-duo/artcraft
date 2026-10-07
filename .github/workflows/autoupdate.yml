@@ -1,0 +1,56 @@
+name: Autoupdate
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '23 */6 * * *'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: autoupdate
+  cancel-in-progress: false
+
+jobs:
+  autoupdate:
+    name: Check and update manifests
+    runs-on: windows-latest
+    steps:
+      - name: Checkout bucket
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
+      - name: Checkout Scoop core
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          repository: ScoopInstaller/Scoop
+          ref: e6aa3b366bdee8ed138c1e0f7b85192ebdd35d0f # v0.6.0
+          path: scoop_core
+
+      - name: Check for releases and update manifests
+        shell: pwsh
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          $env:SCOOP_HOME = Convert-Path '.\scoop_core'
+          $env:SCOOP = Join-Path $env:RUNNER_TEMP 'scoop'
+          $env:SCOOP_CACHE = Join-Path $env:RUNNER_TEMP 'scoop-cache'
+          $env:SCOOP_GH_TOKEN = $env:GITHUB_TOKEN
+          New-Item -ItemType Directory -Force -Path $env:SCOOP, $env:SCOOP_CACHE | Out-Null
+          & "$env:SCOOP_HOME\bin\checkver.ps1" -Dir "$PWD\bucket" -Update -SkipUpdated -ThrowError
+
+      - name: Commit and push manifest updates
+        shell: pwsh
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -- bucket
+          git diff --cached --quiet
+          if ($LASTEXITCODE -eq 0) {
+            'Nothing to commit.'
+            exit 0
+          }
+          git commit -m 'Autoupdate manifests'
+          git push
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
