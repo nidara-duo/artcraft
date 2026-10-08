@@ -1,6 +1,8 @@
-# ArtCraft Scoop bucket
+# artcraft
 
-Scoop manifests for ArtCraft's Windows applications.
+Scoop bucket for the ArtCraft suite — open-source Rust reimplementations of
+Adobe and Microsoft applications, built at
+[getartcraft.com](https://getartcraft.com).
 
 ## Install
 
@@ -9,48 +11,50 @@ scoop bucket add artcraft https://github.com/nidara-duo/artcraft
 scoop install artcraft/vectorcraft
 ```
 
-Replace `vectorcraft` with any manifest name listed below.
+## Packages
 
-## Applications
+| Manifest      | Version | Architectures   |
+| ------------- | ------- | --------------- |
+| `vectorcraft` | 0.4.0   | x64, x86, arm64 |
+| `effectcraft` | 0.4.0   | x64, x86, arm64 |
+| `photocraft`  | 0.3.0   | x64, x86, arm64 |
+| `pdfcraft`    | 0.2.1   | x64, x86        |
+| `designcraft` | 0.2.1   | x64, x86        |
+| `lightcraft`  | 0.2.1   | x64, x86        |
+| `filmcraft`   | 0.2.1   | x64, x86        |
+| `cadcraft`    | 0.1.0   | x64, x86, arm64 |
+| `deckcraft`   | 0.1.0   | x64, x86        |
+| `gridcraft`   | 0.1.0   | x64, x86, arm64 |
+| `wordcraft`   | 0.1.0   | x64, x86, arm64 |
 
-| Manifest | Application |
-| --- | --- |
-| `designcraft` | Page layout and publishing (InDesign) |
-| `effectcraft` | Motion graphics and visual effects (After Effects) |
-| `filmcraft` | Video editing (Premiere Pro) |
-| `lightcraft` | Photo management and development (Lightroom) |
-| `pdfcraft` | PDF editing (Acrobat) |
-| `photocraft` | Raster image editing (Photoshop) |
-| `vectorcraft` | Vector illustration (Illustrator) |
+No published release yet: `soundcraft`.
 
-The manifests track the upstream releases; this table intentionally does not duplicate their versions. Each manifest defines the available Windows architectures and download details.
+Manifests package the portable `.zip` builds. The `.msi` builds are per-machine
+installers, and Scoop discards everything an installer does besides unpacking
+files, so there is nothing to gain from them.
 
-### Not packaged yet
+## Autoupdate
 
-`wordcraft`, `soundcraft`, `gridcraft`, `deckcraft`, and `cadcraft` do not have manifests in this bucket yet. Add one when there is a usable Windows release with a stable download URL and verifiable checksum.
+`.github/workflows/autoupdate.yml` runs `bin/checkver.ps1 -Update` every six
+hours and commits whatever changed straight to the default branch — no pull
+requests. Hashes come from the `digest` field GitHub publishes for every release
+asset, so nothing is downloaded.
 
-## Updates
-
-GitHub Actions checks upstream GitHub releases every six hours and commits changed manifests directly to the default branch. Scoop ignores pre-releases in GitHub release checks. The workflow runs on a GitHub-hosted runner and never installs ArtCraft applications on your PC. Scoop uses release digests when available; if an upstream release omits one, `checkver` may download that archive on the runner to calculate its SHA-256. Grant GitHub Actions read and write access so the workflow can push updates.
-
-For a local version check, run:
+Run it locally:
 
 ```powershell
-.\bin\checkver.ps1 vectorcraft
+.\bin\checkver.ps1 -Update
 ```
 
-A local update with `-Update` can download the new release archive to calculate its checksum when upstream does not publish one. Run it only when you want that check and have the bandwidth available:
+The workflow needs `contents: write`, so enable
+*Settings → Actions → General → Workflow permissions → Read and write*.
 
-```powershell
-.\bin\checkver.ps1 vectorcraft -Update
+`.github/workflows/ci.yml` validates every manifest against the Scoop schema on
+push.
+
+## Layout
+
 ```
-
-## Contributing
-
-Pull requests are welcome, including from ArtCraft developers. See [CONTRIBUTING.md](CONTRIBUTING.md) for the manifest requirements and review process. CI checks manifest format and Scoop compatibility on pull requests.
-
-## Repository layout
-
-- `bucket/` — one Scoop JSON manifest per application
-- `bin/` — wrappers around Scoop's manifest tools
-- `.github/workflows/` — CI and scheduled manifest updates
+bucket/     one JSON manifest per package
+bin/        checkver, formatjson, missing-checkver, test wrappers
+```

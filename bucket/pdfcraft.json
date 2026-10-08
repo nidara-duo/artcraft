@@ -21,14 +21,17 @@
         "github": "https://github.com/storytold/pdfcraft"
     },
     "autoupdate": {
-        "url": "https://github.com/storytold/pdfcraft/releases/download/v$version/printcraft-$version-windows-x64-portable.zip",
-        "extract_dir": "printcraft-$version-windows-x64-portable",
+        "url": "https://github.com/storytold/pdfcraft/releases/download/v$version/pdfcraft-$version-windows-x64-portable.zip",
+        "extract_dir": "pdfcraft-$version-windows-x64-portable",
+        "bin": [
+            "pdfcraft.exe",
+            "pdfcraft-cli.exe"
+        ],
         "architecture": {
             "32bit": {
-                "url": "https://github.com/storytold/pdfcraft/releases/download/v$version/printcraft-$version-windows-x86-portable.zip",
-                "extract_dir": "printcraft-$version-windows-x86-portable"
+                "url": "https://github.com/storytold/pdfcraft/releases/download/v$version/pdfcraft-$version-windows-x86-portable.zip",
+                "extract_dir": "pdfcraft-$version-windows-x86-portable"
             }
         }
-    },
-    "notes": "The published release assets currently use the printcraft-* names. Update this manifest if a later release changes the asset names."
+    }
 }
