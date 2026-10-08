@@ -46,8 +46,9 @@ Run it locally:
 .\bin\checkver.ps1 -Update
 ```
 
-The workflow needs `contents: write`, so enable
-*Settings → Actions → General → Workflow permissions → Read and write*.
+The workflow declares `permissions: contents: write`, which overrides the
+repository's read-only default for `GITHUB_TOKEN`, so no change under
+*Settings → Actions* is needed.
 
 `.github/workflows/ci.yml` validates every manifest against the Scoop schema on
 push.
