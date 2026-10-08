@@ -11,19 +11,19 @@ scoop install artcraft/vectorcraft
 
 ## Packages
 
-| Manifest      | Version | Architectures   |
-| ------------- | ------- | --------------- |
-| `vectorcraft` | 0.4.0   | x64, x86, arm64 |
-| `effectcraft` | 0.4.0   | x64, x86, arm64 |
-| `photocraft`  | 0.3.0   | x64, x86, arm64 |
-| `pdfcraft`    | 0.2.1   | x64, x86        |
-| `designcraft` | 0.2.1   | x64, x86        |
-| `lightcraft`  | 0.2.1   | x64, x86        |
-| `filmcraft`   | 0.2.1   | x64, x86        |
-| `cadcraft`    | 0.1.0   | x64, x86, arm64 |
-| `deckcraft`   | 0.1.0   | x64, x86        |
-| `gridcraft`   | 0.1.0   | x64, x86, arm64 |
-| `wordcraft`   | 0.1.0   | x64, x86, arm64 |
+| Manifest      | Architectures   |
+| ------------- | --------------- |
+| `vectorcraft` | x64, x86, arm64 |
+| `effectcraft` | x64, x86, arm64 |
+| `photocraft`  | x64, x86, arm64 |
+| `cadcraft`    | x64, x86, arm64 |
+| `gridcraft`   | x64, x86, arm64 |
+| `wordcraft`   | x64, x86, arm64 |
+| `pdfcraft`    | x64, x86        |
+| `designcraft` | x64, x86        |
+| `lightcraft`  | x64, x86        |
+| `filmcraft`   | x64, x86        |
+| `deckcraft`   | x64, x86        |
 
 Without a published release: `soundcraft`.
 
