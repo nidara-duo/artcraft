@@ -15,19 +15,23 @@ Replace `vectorcraft` with any manifest name listed below.
 
 | Manifest | Application |
 | --- | --- |
+| `cadcraft` | Computer-aided design and drafting (AutoCAD) |
+| `deckcraft` | Presentations and slide shows (PowerPoint) |
 | `designcraft` | Page layout and publishing (InDesign) |
 | `effectcraft` | Motion graphics and visual effects (After Effects) |
 | `filmcraft` | Video editing (Premiere Pro) |
+| `gridcraft` | Spreadsheets (Excel) |
 | `lightcraft` | Photo management and development (Lightroom) |
 | `pdfcraft` | PDF editing (Acrobat) |
 | `photocraft` | Raster image editing (Photoshop) |
 | `vectorcraft` | Vector illustration (Illustrator) |
+| `wordcraft` | Word processing (Word) |
 
 The manifests track the upstream releases; this table intentionally does not duplicate their versions. Each manifest defines the available Windows architectures and download details.
 
 ### Not packaged yet
 
-`wordcraft`, `soundcraft`, `gridcraft`, `deckcraft`, and `cadcraft` do not have manifests in this bucket yet. Add one when there is a usable Windows release with a stable download URL and verifiable checksum.
+`soundcraft` does not have a manifest in this bucket yet. Add one when there is a usable Windows release with a stable download URL and verifiable checksum.
 
 ## Updates
 
