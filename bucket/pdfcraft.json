@@ -33,5 +33,6 @@
                 "extract_dir": "pdfcraft-$version-windows-x86-portable"
             }
         }
-    }
+    },
+    "notes": "Upstream is renaming PrintCraft to PDFCraft. Published assets are still named printcraft-*, autoupdate already uses the pdfcraft-* names that the current main branch builds."
 }
