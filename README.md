@@ -1,8 +1,6 @@
 # artcraft
 
-Scoop bucket for the ArtCraft suite — open-source Rust reimplementations of
-Adobe and Microsoft applications, built at
-[getartcraft.com](https://getartcraft.com).
+Scoop bucket for the ArtCraft suite — https://getartcraft.com
 
 ## Install
 
@@ -27,35 +25,21 @@ scoop install artcraft/vectorcraft
 | `gridcraft`   | 0.1.0   | x64, x86, arm64 |
 | `wordcraft`   | 0.1.0   | x64, x86, arm64 |
 
-No published release yet: `soundcraft`.
+Without a published release: `soundcraft`.
 
-Manifests package the portable `.zip` builds. The `.msi` builds are per-machine
-installers, and Scoop discards everything an installer does besides unpacking
-files, so there is nothing to gain from them.
+## Maintenance
 
-## Autoupdate
+| Command                             | Purpose                              |
+| ----------------------------------- | ------------------------------------ |
+| `.\bin\checkver.ps1 -Update`        | bump manifests to upstream releases  |
+| `.\bin\formatjson.ps1`              | canonical JSON formatting            |
+| `.\bin\missing-checkver.ps1`        | manifests without `checkver`         |
+| `.\bin\test.ps1`                    | schema and style tests (needs Pester) |
 
-`.github/workflows/autoupdate.yml` runs `bin/checkver.ps1 -Update` every six
-hours and commits whatever changed straight to the default branch — no pull
-requests. Hashes come from the `digest` field GitHub publishes for every release
-asset, so nothing is downloaded.
-
-Run it locally:
-
-```powershell
-.\bin\checkver.ps1 -Update
-```
-
-The workflow declares `permissions: contents: write`, which overrides the
-repository's read-only default for `GITHUB_TOKEN`, so no change under
-*Settings → Actions* is needed.
-
-`.github/workflows/ci.yml` validates every manifest against the Scoop schema on
-push.
-
-## Layout
+`.github/workflows/autoupdate.yml` runs `checkver -Update` every 6 hours and
+commits to `main`. `.github/workflows/ci.yml` validates manifests on push.
 
 ```
-bucket/     one JSON manifest per package
-bin/        checkver, formatjson, missing-checkver, test wrappers
+bucket/   manifests
+bin/      wrappers around scoop's own scripts
 ```
