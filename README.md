@@ -1,6 +1,6 @@
-# artcraft
+# ArtCraft Scoop bucket
 
-Scoop bucket for the ArtCraft suite — https://getartcraft.com
+Scoop manifests for ArtCraft's Windows applications.
 
 ## Install
 
@@ -9,37 +9,48 @@ scoop bucket add artcraft https://github.com/nidara-duo/artcraft
 scoop install artcraft/vectorcraft
 ```
 
-## Packages
+Replace `vectorcraft` with any manifest name listed below.
 
-| Manifest      | Architectures   |
-| ------------- | --------------- |
-| `vectorcraft` | x64, x86, arm64 |
-| `effectcraft` | x64, x86, arm64 |
-| `photocraft`  | x64, x86, arm64 |
-| `cadcraft`    | x64, x86, arm64 |
-| `gridcraft`   | x64, x86, arm64 |
-| `wordcraft`   | x64, x86, arm64 |
-| `pdfcraft`    | x64, x86        |
-| `designcraft` | x64, x86        |
-| `lightcraft`  | x64, x86        |
-| `filmcraft`   | x64, x86        |
-| `deckcraft`   | x64, x86        |
+## Applications
 
-Without a published release: `soundcraft`.
+| Manifest | Application |
+| --- | --- |
+| `designcraft` | Page layout and publishing (InDesign) |
+| `effectcraft` | Motion graphics and visual effects (After Effects) |
+| `filmcraft` | Video editing (Premiere Pro) |
+| `lightcraft` | Photo management and development (Lightroom) |
+| `pdfcraft` | PDF editing (Acrobat) |
+| `photocraft` | Raster image editing (Photoshop) |
+| `vectorcraft` | Vector illustration (Illustrator) |
 
-## Maintenance
+The manifests track the upstream releases; this table intentionally does not duplicate their versions. Each manifest defines the available Windows architectures and download details.
 
-| Command                             | Purpose                              |
-| ----------------------------------- | ------------------------------------ |
-| `.\bin\checkver.ps1 -Update`        | bump manifests to upstream releases  |
-| `.\bin\formatjson.ps1`              | canonical JSON formatting            |
-| `.\bin\missing-checkver.ps1`        | manifests without `checkver`         |
-| `.\bin\test.ps1`                    | schema and style tests (needs Pester) |
+### Not packaged yet
 
-`.github/workflows/autoupdate.yml` runs `checkver -Update` every 6 hours and
-commits to `main`. `.github/workflows/ci.yml` validates manifests on push.
+`wordcraft`, `soundcraft`, `gridcraft`, `deckcraft`, and `cadcraft` do not have manifests in this bucket yet. Add one when there is a usable Windows release with a stable download URL and verifiable checksum.
 
+## Updates
+
+GitHub Actions checks upstream GitHub releases every six hours and commits changed manifests directly to the default branch. Scoop ignores pre-releases in GitHub release checks. The workflow runs on a GitHub-hosted runner and never installs ArtCraft applications on your PC. Scoop uses release digests when available; if an upstream release omits one, `checkver` may download that archive on the runner to calculate its SHA-256. Grant GitHub Actions read and write access so the workflow can push updates.
+
+For a local version check, run:
+
+```powershell
+.\bin\checkver.ps1 vectorcraft
 ```
-bucket/   manifests
-bin/      wrappers around scoop's own scripts
+
+A local update with `-Update` can download the new release archive to calculate its checksum when upstream does not publish one. Run it only when you want that check and have the bandwidth available:
+
+```powershell
+.\bin\checkver.ps1 vectorcraft -Update
 ```
+
+## Contributing
+
+Pull requests are welcome, including from ArtCraft developers. See [CONTRIBUTING.md](CONTRIBUTING.md) for the manifest requirements and review process. CI checks manifest format and Scoop compatibility on pull requests.
+
+## Repository layout
+
+- `bucket/` — one Scoop JSON manifest per application
+- `bin/` — wrappers around Scoop's manifest tools
+- `.github/workflows/` — CI and scheduled manifest updates
