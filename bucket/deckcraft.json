@@ -1,11 +1,11 @@
 {
-    "version": "0.6.1",
+    "version": "0.7.0",
     "description": "Presentations and slide shows: an open-source, clean-room reimplementation of Microsoft PowerPoint in pure Rust",
     "homepage": "https://github.com/storytold/deckcraft",
     "license": "Apache-2.0",
-    "url": "https://github.com/storytold/deckcraft/releases/download/v0.6.1/deckcraft-0.6.1-windows-x64-portable.zip",
-    "hash": "339ea7b9a4901fd0bc6fe1b96fedbc34e72a3c0d0897c44ad1750262d63db84f",
-    "extract_dir": "deckcraft-0.6.1-windows-x64-portable",
+    "url": "https://github.com/storytold/deckcraft/releases/download/v0.7.0/deckcraft-0.7.0-windows-x64-portable.zip",
+    "hash": "3d67962a206af89d66ef443a042efcc5386a14d4e0d9c056bc1f62a84bd7954c",
+    "extract_dir": "deckcraft-0.7.0-windows-x64-portable",
     "bin": [
         "deckcraft.exe",
         "deckcraft-cli.exe"
