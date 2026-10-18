@@ -1,11 +1,11 @@
 {
-    "version": "0.7.0",
+    "version": "0.8.0",
     "description": "GridCraft: an open-source, clean-room spreadsheet (Microsoft Excel-style) in pure Rust",
     "homepage": "https://github.com/storytold/gridcraft",
     "license": "Apache-2.0",
-    "url": "https://github.com/storytold/gridcraft/releases/download/v0.7.0/gridcraft-0.7.0-windows-x64-portable.zip",
-    "hash": "24bf4ee129769268e27510a260de6c7fd7eded84ea541499132576e3d7ea6a86",
-    "extract_dir": "gridcraft-0.7.0-windows-x64-portable",
+    "url": "https://github.com/storytold/gridcraft/releases/download/v0.8.0/gridcraft-0.8.0-windows-x64-portable.zip",
+    "hash": "b0ab27606b161bd0919cff6a321a81ca227eb2262a9709853c2079dbc4097567",
+    "extract_dir": "gridcraft-0.8.0-windows-x64-portable",
     "bin": [
         "gridcraft.exe",
         "gridcraft-cli.exe"
