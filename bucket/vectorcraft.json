@@ -1,11 +1,11 @@
 {
-    "version": "0.13.1",
+    "version": "0.14.0",
     "description": "An open-source, clean-room reimplementation of Adobe Illustrator, built in pure Rust",
     "homepage": "https://getartcraft.com/apps/vectorcraft",
     "license": "Apache-2.0",
-    "url": "https://github.com/storytold/vectorcraft/releases/download/v0.13.1/vectorcraft-0.13.1-windows-x64-portable.zip",
-    "hash": "6c46505e20dfd637b37ff8e1ead9aa69758acdc877ae46cc8b3338463e078b51",
-    "extract_dir": "vectorcraft-0.13.1-windows-x64-portable",
+    "url": "https://github.com/storytold/vectorcraft/releases/download/v0.14.0/vectorcraft-0.14.0-windows-x64-portable.zip",
+    "hash": "4525707341aa298f648c32878f93da2af06742e53d0922b5de418b3dbd6b235e",
+    "extract_dir": "vectorcraft-0.14.0-windows-x64-portable",
     "bin": [
         "vectorcraft.exe",
         "vectorcraft-cli.exe"
