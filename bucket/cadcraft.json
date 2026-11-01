@@ -1,11 +1,11 @@
 {
-    "version": "0.15.1",
+    "version": "0.16.0",
     "description": "CADCraft: computer-aided design and drafting, an open-source clean-room AutoCAD-style app in pure Rust",
     "homepage": "https://github.com/storytold/cadcraft",
     "license": "Apache-2.0",
-    "url": "https://github.com/storytold/cadcraft/releases/download/v0.15.1/cadcraft-0.15.1-windows-x64-portable.zip",
-    "hash": "768359a9be14aab726d32e77a65212452bf37022316bffbcb19cf9886ae50b4b",
-    "extract_dir": "cadcraft-0.15.1-windows-x64-portable",
+    "url": "https://github.com/storytold/cadcraft/releases/download/v0.16.0/cadcraft-0.16.0-windows-x64-portable.zip",
+    "hash": "f1da79b0e8d334eb5bf5124902147d755b22e88bedc978330434b934c5303bf8",
+    "extract_dir": "cadcraft-0.16.0-windows-x64-portable",
     "bin": [
         "cadcraft.exe",
         "cadcraft-cli.exe"
