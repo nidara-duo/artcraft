@@ -1,11 +1,11 @@
 {
-    "version": "0.17.0",
+    "version": "0.17.2",
     "description": "Page layout and publishing; an open-source, clean-room reimplementation of Adobe InDesign, rebuilt in pure Rust",
     "homepage": "https://getartcraft.com/apps/designcraft",
     "license": "Apache-2.0",
-    "url": "https://github.com/storytold/designcraft/releases/download/v0.17.0/designcraft-0.17.0-windows-x64-portable.zip",
-    "hash": "37dd157b7af22864e4d2693e60411c5e5cce492d69042bf03af8728f8b7f8134",
-    "extract_dir": "designcraft-0.17.0-windows-x64-portable",
+    "url": "https://github.com/storytold/designcraft/releases/download/v0.17.2/designcraft-0.17.2-windows-x64-portable.zip",
+    "hash": "dac3b475614ee53079be82b873999217678450245c378108c9206f5549824c45",
+    "extract_dir": "designcraft-0.17.2-windows-x64-portable",
     "bin": [
         "designcraft.exe",
         "designcraft-cli.exe"
