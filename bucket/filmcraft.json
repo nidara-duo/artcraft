@@ -1,11 +1,11 @@
 {
-    "version": "0.18.0",
+    "version": "0.19.0",
     "description": "An open-source, clean-room reimplementation of Adobe Premiere Pro in pure Rust",
     "homepage": "https://getartcraft.com/apps/filmcraft",
     "license": "Apache-2.0",
-    "url": "https://github.com/storytold/filmcraft/releases/download/v0.18.0/filmcraft-0.18.0-windows-x64-portable.zip",
-    "hash": "82847cf49087e95fd3f72dde80955d1c63af2821ad677e34e3de7a0e873e95bf",
-    "extract_dir": "filmcraft-0.18.0-windows-x64-portable",
+    "url": "https://github.com/storytold/filmcraft/releases/download/v0.19.0/filmcraft-0.19.0-windows-x64-portable.zip",
+    "hash": "b31f362b4767da4336f14b025ae92618b48e0a37b84e55905a6afc9fe51a5aae",
+    "extract_dir": "filmcraft-0.19.0-windows-x64-portable",
     "bin": [
         "filmcraft.exe",
         "filmcraft-cli.exe"
