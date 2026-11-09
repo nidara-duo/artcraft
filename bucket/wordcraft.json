@@ -1,11 +1,11 @@
 {
-    "version": "0.16.0",
+    "version": "0.17.0",
     "description": "An open-source, clean-room reimplementation of Microsoft Word in pure Rust",
     "homepage": "https://github.com/storytold/wordcraft",
     "license": "Apache-2.0",
-    "url": "https://github.com/storytold/wordcraft/releases/download/v0.16.0/wordcraft-0.16.0-windows-x64-portable.zip",
-    "hash": "aab5bfc4b5ce63c1bb1036ea2ab68aa1dbb300d8936de948c29739b15b3118e3",
-    "extract_dir": "wordcraft-0.16.0-windows-x64-portable",
+    "url": "https://github.com/storytold/wordcraft/releases/download/v0.17.0/wordcraft-0.17.0-windows-x64-portable.zip",
+    "hash": "ad05af39d62504ddb382f93f9b7e2e7e9ce92938d132c18c4fb43e10822108ce",
+    "extract_dir": "wordcraft-0.17.0-windows-x64-portable",
     "bin": [
         "wordcraft.exe",
         "wordcraft-cli.exe"
