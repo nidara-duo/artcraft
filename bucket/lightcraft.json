@@ -1,11 +1,11 @@
 {
-    "version": "0.20.0",
+    "version": "0.21.1",
     "description": "An open-source, clean-room reimplementation of Adobe Lightroom in pure Rust",
     "homepage": "https://getartcraft.com/apps/lightcraft",
     "license": "Apache-2.0",
-    "url": "https://github.com/storytold/lightcraft/releases/download/v0.20.0/lightcraft-0.20.0-windows-x64-portable.zip",
-    "hash": "3270be6ba63455714f1337c11a297fde92e8e822fcc61c49e3b4d31db85ea5ea",
-    "extract_dir": "lightcraft-0.20.0-windows-x64-portable",
+    "url": "https://github.com/storytold/lightcraft/releases/download/v0.21.1/lightcraft-0.21.1-windows-x64-portable.zip",
+    "hash": "c2f195a4611bd7a314675c090b71e46e14001a232ba825edd5b6ea0ea7f616da",
+    "extract_dir": "lightcraft-0.21.1-windows-x64-portable",
     "bin": [
         "lightcraft.exe",
         "lightcraft-cli.exe"
