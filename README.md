@@ -15,23 +15,26 @@ Replace `vectorcraft` with any manifest name listed below.
 
 | Manifest | Application |
 | --- | --- |
+| `artcraft` | Interactive AI image and video creation IDE |
+| `artcraft-launcher` | Launcher for the Craft app suite |
 | `cadcraft` | Computer-aided design and drafting (AutoCAD) |
+| `craft-anything` | Learn how software works and build your own |
 | `deckcraft` | Presentations and slide shows (PowerPoint) |
 | `designcraft` | Page layout and publishing (InDesign) |
 | `effectcraft` | Motion graphics and visual effects (After Effects) |
-| `filmcraft` | Video editing (Premiere Pro) |
-| `gridcraft` | Spreadsheets (Excel) |
-| `lightcraft` | Photo management and development (Lightroom) |
+| `figcraft` | Interface design and prototyping (Figma) |
+| `filmcraft` | Video editing, color and sound (Premiere Pro) |
+| `gridcraft` | Spreadsheets and data (Excel) |
+| `lightcraft` | Photo library and raw development (Lightroom) |
+| `materialcraft` | Node-based material designer |
 | `pdfcraft` | PDF editing (Acrobat) |
-| `photocraft` | Raster image editing (Photoshop) |
+| `photocraft` | Image editing (Photoshop) |
+| `soundcraft` | Recording, editing and mixing audio (Pro Tools) |
+| `texturecraft` | 3D texture painting |
 | `vectorcraft` | Vector illustration (Illustrator) |
-| `wordcraft` | Word processing (Word) |
+| `wordcraft` | Writing and document design (Word) |
 
-The manifests track the upstream releases; this table intentionally does not duplicate their versions. Each manifest defines the available Windows architectures and download details.
-
-### Not packaged yet
-
-`soundcraft` does not have a manifest in this bucket yet. Add one when there is a usable Windows release with a stable download URL and verifiable checksum.
+The manifests track the upstream releases; this table intentionally does not duplicate their versions. Each manifest defines the available Windows architectures and download details. All applications ship portable x64 and arm64 builds except `artcraft`, which upstream provides as an x64 installer only.
 
 ## Updates
 
