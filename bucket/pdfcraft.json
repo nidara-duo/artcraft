@@ -1,11 +1,11 @@
 {
-    "version": "0.21.0",
+    "version": "0.21.1",
     "description": "An open-source, clean-room reimplementation of Adobe Acrobat built in pure Rust",
     "homepage": "https://getartcraft.com/apps/printcraft",
     "license": "Apache-2.0",
-    "url": "https://github.com/storytold/pdfcraft/releases/download/v0.21.0/pdfcraft-0.21.0-windows-x64-portable.zip",
-    "hash": "cad666b17c7e81a0a51e3b68f6d0265b95bcf735f0aabff1303d500119987535",
-    "extract_dir": "pdfcraft-0.21.0-windows-x64-portable",
+    "url": "https://github.com/storytold/pdfcraft/releases/download/v0.21.1/pdfcraft-0.21.1-windows-x64-portable.zip",
+    "hash": "dcbcc2ddc019d85cca90a8242d5e4dc380f1ff6bfb6b951a89152d1dbae14cb4",
+    "extract_dir": "pdfcraft-0.21.1-windows-x64-portable",
     "bin": [
         "pdfcraft.exe",
         "pdfcraft-cli.exe"
